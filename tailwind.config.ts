@@ -9,19 +9,20 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "#F8F9FA",
-        foreground: "#1A1A1A",
-        accent: "#2563EB",
-        "accent-dark": "#1E40AF",
-        glass: "rgba(255, 255, 255, 0.7)",
-        "glass-border": "rgba(0, 0, 0, 0.08)",
+        background: "#ECE9E2",
+        foreground: "#202327",
+        accent: "#5A616B",
+        "accent-dark": "#464C54",
+        glass: "rgba(246, 243, 237, 0.9)",
+        "glass-border": "rgba(32, 35, 39, 0.14)",
       },
       fontFamily: {
-        sans: ["var(--font-jakarta)"],
+        sans: ["var(--font-body)"],
+        display: ["var(--font-display)"],
       },
       boxShadow: {
-        glass: "0 10px 30px rgba(0, 0, 0, 0.05)",
-        glow: "0 0 20px rgba(37, 99, 235, 0.2)",
+        glass: "0 10px 24px rgba(32, 35, 39, 0.08)",
+        glow: "0 0 12px rgba(90, 97, 107, 0.12)",
       },
     },
   },

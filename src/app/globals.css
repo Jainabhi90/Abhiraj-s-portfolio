@@ -3,38 +3,72 @@
 @tailwind utilities;
 
 :root {
-  --background: #F8F9FA;
-  --foreground: #1A1A1A;
+  --background: #ece9e2;
+  --foreground: #202327;
+  --surface: #f6f3ed;
+  --surface-strong: #dfdacf;
+  --muted: #666b72;
+  --accent: #5a616b;
 }
 
 body {
   color: var(--foreground);
-  background: var(--background);
+  background: linear-gradient(180deg, #efece6 0%, var(--background) 100%);
   scroll-behavior: smooth;
   overflow-x: hidden;
+  font-family: var(--font-body), sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display), serif;
+  letter-spacing: 0.01em;
+  color: var(--foreground);
 }
 
 ::selection {
-  background-color: #2563EB;
-  color: #FFFFFF;
+  background-color: #5a616b;
+  color: #f6f3ed;
 }
 
 ::-webkit-scrollbar {
   width: 10px;
 }
 ::-webkit-scrollbar-track {
-  background: #F8F9FA;
+  background: #ece9e2;
 }
 ::-webkit-scrollbar-thumb {
-  background: #D1D5DB;
+  background: #bab4a8;
   border-radius: 5px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #9CA3AF;
+  background: #8f877a;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  /* Lock core theme utilities to CSS variables so palette stays consistent. */
+  .text-accent {
+    color: var(--accent) !important;
+  }
+
+  .bg-accent {
+    background-color: var(--accent) !important;
+  }
+
+  .border-accent {
+    border-color: var(--accent) !important;
+  }
+
+  .text-foreground {
+    color: var(--foreground) !important;
+  }
+
+  .bg-background {
+    background-color: var(--background) !important;
   }
 }

@@ -10,7 +10,7 @@ import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <main className="min-h-screen relative selection:bg-[#00D4FF] selection:text-[#121212]">
+    <main className="min-h-screen relative selection:bg-accent selection:text-background">
       <Header />
       <Hero />
       <About />

@@ -32,7 +32,7 @@ const EXPERIENCES = [
 
 export default function Experience() {
   return (
-    <section id="experience" className="py-24 px-6 bg-[#0F0F0F]">
+    <section id="experience" className="py-24 px-6 bg-background">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -60,7 +60,7 @@ export default function Experience() {
               {EXPERIENCES.map((exp, index) => (
                 <div key={index} className={`relative flex flex-col md:flex-row items-start ${index % 2 === 0 ? "md:flex-row-reverse" : ""}`}>
                   {/* Timeline Dot */}
-                  <div className="absolute left-6 md:left-1/2 w-10 h-10 rounded-full bg-[#121212] border-2 border-accent transform -translate-x-1/2 flex items-center justify-center z-10 shadow-[0_0_15px_rgba(0,212,255,0.5)]">
+                  <div className="absolute left-6 md:left-1/2 w-10 h-10 rounded-full bg-[var(--surface)] border-2 border-accent transform -translate-x-1/2 flex items-center justify-center z-10 shadow-[0_0_15px_rgba(52,80,112,0.25)]">
                     <div className="w-3 h-3 rounded-full bg-accent" />
                   </div>
                   
@@ -73,20 +73,20 @@ export default function Experience() {
                     className={`ml-20 md:ml-0 md:w-[calc(50%-40px)] bg-glass border border-glass-border p-8 rounded-3xl shadow-glass hover:border-accent/40 transition-colors ${index % 2 === 0 ? "md:ml-auto" : "md:mr-auto"}`}
                   >
                     <div className="flex items-center gap-4 mb-4">
-                      <div className="p-3 bg-white/5 rounded-2xl border border-white/10 shrink-0">
+                      <div className="p-3 bg-[var(--surface)] rounded-2xl border border-glass-border shrink-0">
                         {exp.icon}
                       </div>
                       <div>
-                        <h3 className="text-xl font-bold text-white">{exp.role}</h3>
+                        <h3 className="text-xl font-semibold text-foreground">{exp.role}</h3>
                         <p className="text-accent text-sm font-medium">{exp.organization}</p>
                       </div>
                     </div>
-                    <p className="text-xs text-gray-500 font-medium uppercase tracking-wider mb-6 bg-white/5 inline-block px-3 py-1 rounded-full border border-white/5">
+                    <p className="text-xs text-foreground/72 font-medium uppercase tracking-wider mb-6 bg-[var(--surface)] inline-block px-3 py-1 rounded-full border border-glass-border">
                       {exp.duration}
                     </p>
                     <ul className="space-y-3">
                       {exp.responsibilities.map((req, i) => (
-                        <li key={i} className="text-sm text-gray-300 flex items-start">
+                        <li key={i} className="text-sm text-foreground/80 flex items-start">
                           <span className="text-accent mr-2 mt-0.5">•</span>
                           {req}
                         </li>

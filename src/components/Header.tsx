@@ -29,12 +29,12 @@ export default function Header() {
       className={cn(
         "fixed top-0 left-0 w-full z-50 transition-all duration-300",
         hasScrolled
-          ? "bg-[#121212]/80 backdrop-blur-md border-b border-glass-border shadow-glass py-4"
-          : "bg-transparent py-6"
+          ? "bg-glass/90 backdrop-blur-md border-b border-glass-border shadow-glass py-4"
+          : "bg-glass/65 backdrop-blur-sm border-b border-glass-border/50 py-5"
       )}
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
-        <a href="#" className="text-2xl font-bold tracking-tighter text-white">
+        <a href="#hero" className="text-2xl font-semibold tracking-tight text-foreground">
           ABHIRAJ<span className="text-accent">.</span>
         </a>
 
@@ -44,7 +44,7 @@ export default function Header() {
             <a
               key={link.name}
               href={link.href}
-              className="text-sm font-medium text-gray-300 hover:text-accent transition-colors duration-300"
+              className="text-sm font-medium text-foreground/90 hover:text-accent transition-colors duration-300"
             >
               {link.name}
             </a>
@@ -53,7 +53,7 @@ export default function Header() {
 
         {/* Mobile Toggle */}
         <button
-          className="md:hidden text-white hover:text-accent transition-colors"
+          className="md:hidden text-foreground hover:text-accent transition-colors"
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle Menu"
         >
@@ -65,7 +65,7 @@ export default function Header() {
       <motion.nav
         initial={false}
         animate={{ height: isOpen ? "auto" : 0, opacity: isOpen ? 1 : 0 }}
-        className="md:hidden overflow-hidden bg-[#121212]/95 backdrop-blur-md border-b border-glass-border shadow-glass"
+        className="md:hidden overflow-hidden bg-[var(--surface)]/95 backdrop-blur-md border-b border-glass-border shadow-glass"
       >
         <div className="flex flex-col py-4 px-6 gap-4">
           {NAV_LINKS.map((link) => (
@@ -73,7 +73,7 @@ export default function Header() {
               key={link.name}
               href={link.href}
               onClick={() => setIsOpen(false)}
-              className="text-base font-medium text-gray-300 hover:text-accent transition-colors duration-300"
+              className="text-base font-medium text-foreground/90 hover:text-accent transition-colors duration-300"
             >
               {link.name}
             </a>

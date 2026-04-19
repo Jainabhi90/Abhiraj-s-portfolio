@@ -29,21 +29,21 @@ export default function About() {
           
           <div className="grid md:grid-cols-2 gap-12 lg:gap-24 items-center">
             <div>
-              <p className="text-gray-300 text-lg leading-relaxed mb-8">
+              <p className="text-foreground/80 text-lg leading-relaxed mb-8">
                 Full-stack developer and AI/ML student at ADYPU with expertise in building scalable web applications. Passionate about creating innovative solutions that solve real-world problems. Experienced in JavaScript, React, Node.js, and API integration with a proven track record of shipping live products. Strong foundation in Data Structures and Algorithms with demonstrated leadership in community-building initiatives.
               </p>
               
               <div className="flex flex-wrap gap-4 mb-12">
-                <a href="mailto:abhiraj.jain@vedamsot.org" className="p-3 bg-glass border border-glass-border rounded-full hover:bg-accent/20 hover:text-accent transition-colors">
+                <a aria-label="Email Abhiraj" href="mailto:abhiraj.jain@vedamsot.org" className="p-3 bg-glass border border-glass-border rounded-full hover:bg-accent/20 hover:text-accent transition-colors">
                   <Mail size={24} />
                 </a>
-                <a href="tel:+919098025208" className="p-3 bg-glass border border-glass-border rounded-full hover:bg-accent/20 hover:text-accent transition-colors">
+                <a aria-label="Call Abhiraj" href="tel:+919098025208" className="p-3 bg-glass border border-glass-border rounded-full hover:bg-accent/20 hover:text-accent transition-colors">
                   <Phone size={24} />
                 </a>
-                <a href="#" target="_blank" rel="noopener noreferrer" className="p-3 bg-glass border border-glass-border rounded-full hover:bg-accent/20 hover:text-accent transition-colors">
+                <a aria-label="Open LinkedIn profile" href="https://www.linkedin.com/in/abhiraj-jain/" target="_blank" rel="noopener noreferrer" className="p-3 bg-glass border border-glass-border rounded-full hover:bg-accent/20 hover:text-accent transition-colors">
                   <FaLinkedin size={24} />
                 </a>
-                <a href="#" target="_blank" rel="noopener noreferrer" className="p-3 bg-glass border border-glass-border rounded-full hover:bg-accent/20 hover:text-accent transition-colors">
+                <a aria-label="Open GitHub profile" href="https://github.com/Jainabhi90" target="_blank" rel="noopener noreferrer" className="p-3 bg-glass border border-glass-border rounded-full hover:bg-accent/20 hover:text-accent transition-colors">
                   <FaGithub size={24} />
                 </a>
               </div>
@@ -60,7 +60,7 @@ export default function About() {
                   whileHover={{ scale: 1.05 }}
                   className="p-6 rounded-2xl bg-glass border border-glass-border shadow-glass flex items-center justify-center text-center hover:border-accent/50 transition-colors"
                 >
-                  <span className="font-medium text-white">{highlight}</span>
+                  <span className="font-medium text-foreground">{highlight}</span>
                 </motion.div>
               ))}
             </div>

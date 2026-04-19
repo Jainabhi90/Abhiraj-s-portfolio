@@ -16,8 +16,8 @@ const PROJECTS = [
       "Live profit calculator & near-miss tracking"
     ],
     tech: ["React", "Node.js", "MongoDB", "Fuse.js", "Vercel"],
-    github: "#",
-    live: "#"
+    github: "https://github.com/Jainabhi90/Arbitrage",
+    live: "https://arbitrage-xi-nine.vercel.app/"
   },
   {
     title: "InstaLead",
@@ -30,8 +30,8 @@ const PROJECTS = [
       "Multi-user, multi-account scalable architecture"
     ],
     tech: ["React", "Node.js", "MongoDB", "Meta Graph API", "OAuth 2.0", "Vercel"],
-    github: "#",
-    live: "#"
+    github: "https://github.com/Jainabhi90/Insta-CRM",
+    live: "https://insta-crm.vercel.app"
   },
   {
     title: "GitHub Analyzer",
@@ -44,14 +44,14 @@ const PROJECTS = [
       "Developer comparison feature"
     ],
     tech: ["React", "GitHub API", "Data Visualization"],
-    github: "#",
-    live: "#"
+    github: "https://github.com/Jainabhi90/GitHub-Analyser",
+    live: "https://git-hub-analyser.vercel.app/"
   }
 ];
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-24 px-6 bg-[#0F0F0F]">
+    <section id="projects" className="py-24 px-6 bg-[var(--surface)]">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -71,17 +71,16 @@ export default function Projects() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.2 }}
-                whileHover={{ y: -10 }}
+                whileHover={{ y: -5 }}
                 className="bg-glass border border-glass-border rounded-3xl p-8 flex flex-col h-full shadow-glass hover:shadow-glow transition-all duration-300 relative overflow-hidden group"
               >
-                <div className="absolute inset-0 bg-gradient-to-br from-accent/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl"></div>
                 <div className="relative z-10 flex flex-col h-full">
                   <div className="mb-6">
                     <span className="inline-block px-3 py-1 rounded-full bg-accent/10 text-accent text-xs font-semibold mb-4 border border-accent/20">
                       {project.status}
                     </span>
-                    <h3 className="text-2xl font-bold text-white mb-3">{project.title}</h3>
-                    <p className="text-gray-400 text-sm leading-relaxed mb-6">
+                    <h3 className="text-2xl font-semibold text-foreground mb-3">{project.title}</h3>
+                    <p className="text-foreground/82 text-sm leading-relaxed mb-6">
                       {project.description}
                     </p>
                   </div>
@@ -89,7 +88,7 @@ export default function Projects() {
                   <div className="mb-8 flex-grow">
                     <ul className="space-y-2">
                       {project.achievements.map((achievement, i) => (
-                        <li key={i} className="text-sm text-gray-300 flex items-start">
+                        <li key={i} className="text-sm text-foreground/90 flex items-start">
                           <span className="text-accent mr-2 mt-0.5">▹</span>
                           {achievement}
                         </li>
@@ -100,17 +99,17 @@ export default function Projects() {
                   <div className="mt-auto">
                     <div className="flex flex-wrap gap-2 mb-6">
                       {project.tech.map((tech, i) => (
-                        <span key={i} className="text-xs font-medium text-gray-400 bg-white/5 px-2 py-1 rounded-md border border-white/5">
+                        <span key={i} className="text-xs font-medium text-foreground/82 bg-[var(--surface)] px-2 py-1 rounded-md border border-glass-border">
                           {tech}
                         </span>
                       ))}
                     </div>
                     
                     <div className="flex gap-4">
-                      <a href={project.github} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm font-medium text-white hover:text-accent transition-colors">
+                      <a href={project.github} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm font-medium text-foreground hover:text-accent transition-colors">
                         <FaGithub size={18} /> Code
                       </a>
-                      <a href={project.live} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm font-medium text-white hover:text-accent transition-colors ml-4">
+                      <a href={project.live} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm font-medium text-foreground hover:text-accent transition-colors ml-4">
                         <ExternalLink size={18} /> Live Demo
                       </a>
                     </div>

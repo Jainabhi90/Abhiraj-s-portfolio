@@ -27,30 +27,30 @@ export default function Education() {
                   <GraduationCap size={32} />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold text-white mb-1">B.Tech in Computer Science</h3>
-                  <p className="text-gray-400 font-medium">(Artificial Intelligence & Machine Learning)</p>
+                  <h3 className="text-2xl font-semibold text-foreground mb-1">B.Tech in Computer Science</h3>
+                  <p className="text-foreground/78 font-medium">(Artificial Intelligence & Machine Learning)</p>
                 </div>
               </div>
               
               <div className="space-y-6 relative z-10">
-                <div className="flex flex-col border-l-2 border-white/10 pl-4 py-1">
-                  <span className="text-sm text-gray-500 uppercase tracking-wider font-semibold mb-1">University</span>
-                  <span className="text-lg text-white font-medium">Ajeenkya DY Patil University (ADYPU), Pune</span>
+                <div className="flex flex-col border-l-2 border-glass-border pl-4 py-1">
+                  <span className="text-sm text-foreground/72 uppercase tracking-wider font-semibold mb-1">University</span>
+                  <span className="text-lg text-foreground font-medium">Ajeenkya DY Patil University (ADYPU), Pune</span>
                 </div>
                 
-                <div className="flex flex-col border-l-2 border-white/10 pl-4 py-1">
-                  <span className="text-sm text-gray-500 uppercase tracking-wider font-semibold mb-1">Institution</span>
-                  <span className="text-lg text-white font-medium">Vedam School of Technology</span>
+                <div className="flex flex-col border-l-2 border-glass-border pl-4 py-1">
+                  <span className="text-sm text-foreground/72 uppercase tracking-wider font-semibold mb-1">Institution</span>
+                  <span className="text-lg text-foreground font-medium">Vedam School of Technology</span>
                 </div>
                 
                 <div className="grid grid-cols-2 gap-4 pt-4">
-                  <div className="bg-white/5 border border-white/10 p-4 rounded-2xl">
-                    <span className="text-sm text-gray-500 uppercase tracking-wider font-semibold block mb-1">Timeline</span>
-                    <span className="text-xl text-white font-bold">2025 - 2029</span>
+                  <div className="bg-[var(--surface)] border border-glass-border p-4 rounded-2xl">
+                    <span className="text-sm text-foreground/72 uppercase tracking-wider font-semibold block mb-1">Timeline</span>
+                    <span className="text-xl text-foreground font-semibold">2025 - 2029</span>
                   </div>
-                  <div className="bg-accent/10 border border-accent/20 p-4 rounded-2xl shadow-[0_0_15px_rgba(0,212,255,0.1)]">
+                  <div className="bg-accent/10 border border-accent/20 p-4 rounded-2xl shadow-[0_0_15px_rgba(52,80,112,0.15)]">
                     <span className="text-sm text-accent/80 uppercase tracking-wider font-semibold block mb-1">Current CGPA</span>
-                    <span className="text-xl text-accent font-bold">9.13 / 10.0</span>
+                    <span className="text-xl text-accent font-semibold">9.13 / 10.0</span>
                   </div>
                 </div>
               </div>
@@ -83,7 +83,7 @@ export default function Education() {
                   <div className="p-2 bg-accent/10 rounded-full text-accent shrink-0">
                     <Award size={20} />
                   </div>
-                  <p className="text-gray-200 font-medium">{achievement}</p>
+                  <p className="text-foreground/85 font-medium">{achievement}</p>
                 </motion.div>
               ))}
             </div>
